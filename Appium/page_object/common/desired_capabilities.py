@@ -122,21 +122,22 @@ def appium_desired():
     driver.find_element(By.ID,"com.csks.businesses:id/edt_number1").send_keys("津A80801")
     driver.find_element(By.ID,"com.csks.businesses:id/tv_time").click()
 
-    arrivalTime = "2020.08.10"
+    arrivalTime = "2020.08.15"
     arrivalDate = arrivalTime.split(".",3)[2]
     # 获取当前日期的日子
     now_time = str(datetime.datetime.now())
     now_date = now_time.split(" ")[0].split("-", 3)[2]
 
-    num = (int(arrivalDate)-(now_date))
-
-
-
-
-
-
+    num = (int(arrivalDate)-int(now_date))
 
     timeSwipeUp(num)
+
+    driver.find_element(By.XPATH,"//*[@text='确定']").click()
+
+    driver.find_element(By.ID, "com.csks.businesses:id/btn_ok").click()
+
+    toast = driver.find_element(By.XPATH, "//*[contains(@text,'请对您的货品')]").text
+    print(toast)
 
 
 
