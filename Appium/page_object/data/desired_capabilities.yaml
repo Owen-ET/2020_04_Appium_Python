@@ -1,7 +1,8 @@
+url:  http://localhost:4723/wd/hub
 desired_cap:
-  deviceName: "MI 8 SE",                            # 真机名称
-  platformName: "android",                          # 使用的移动端：android、ios
-  platformVersion: "9",                             # 移动端版本
-  appPackage: "com.csks.businesses",                # 被测试软件Package名
-  appActivity: "cn.soft_x.supplies.ui.SplashAty",   # 被测试软件Activity名
-  automationName: "UiAutomator2"                    # Toast内容
+  deviceName: "MI 8 SE"                            # 真机名称
+  platformName: "android"                          # 使用的移动端：android、ios
+  platformVersion: "9"                             # 移动端版本
+  appPackage: "com.csks.businesses"                # 被测试软件Package名
+  appActivity: "cn.soft_x.supplies.ui.SplashAty"   # 被测试软件Activity名
+  automationName: "UiAutomator2"                   # Toast内容
