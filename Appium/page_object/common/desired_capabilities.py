@@ -137,7 +137,7 @@ def appium_desired():
     driver.find_element(By.ID, "com.csks.businesses:id/btn_ok").click()
 
     toast = driver.find_element(By.XPATH, "//*[contains(@text,'请对您的货品')]").text
-    print(toast)
+    print("弹框提示语为：" + toast)
 
 
 
