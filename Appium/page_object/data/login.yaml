@@ -1,0 +1,7 @@
+login:
+  experience: "com.csks.businesses:id/lead_into"
+  username: "android.widget.EditText"
+  usernameValue:
+  password: "//*[@text='请输入密码' and @resource-id='com.csks.businesses:id/edt_password']"
+  rmInput:
+  loginButton:

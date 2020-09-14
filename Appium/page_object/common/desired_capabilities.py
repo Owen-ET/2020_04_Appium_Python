@@ -80,6 +80,7 @@ def appium_desired():
     driver.find_element(By.CLASS_NAME,"android.widget.EditText").send_keys("18602603111")
     # Xpath，利用组合定位
     driver.find_element(By.XPATH,"//*[@text='请输入密码' and @resource-id='com.csks.businesses:id/edt_password']").send_keys("123123")
+    # 点击屏幕去掉输入法
     driver.find_element(By.CLASS_NAME, "android.widget.EditText").click()
     # 点击登录按钮
     driver.find_element(By.ID,"com.csks.businesses:id/tv_login").click()
