@@ -1,7 +1,8 @@
 login:
   experience: "com.csks.businesses:id/lead_into"
   username: "android.widget.EditText"
-  usernameValue:
+  usernameValue:  "18602603111"
   password: "//*[@text='请输入密码' and @resource-id='com.csks.businesses:id/edt_password']"
-  rmInput:
-  loginButton:
+  passwordValue:  "123123"
+  rmInput:  "android.widget.EditText"
+  loginButton:  "com.csks.businesses:id/tv_login"

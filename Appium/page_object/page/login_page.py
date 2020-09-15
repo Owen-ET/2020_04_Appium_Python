@@ -17,15 +17,27 @@ class Login(Page):
     loginData = fun().getYaml("login")['login']
 
 
-
-    # 立即体验
+    # 立即体验元素
     experience_loc = (By.ID,loginData['experience'])
-    # 用户名
-    username_loc = (By.CLASS_NAME,)
+    # 用户名元素
+    username_loc = (By.CLASS_NAME,loginData['username'])
+    # 用户名值
+    usernameValue_loc = loginData['usernameValue']
+    # 密码元素
+    password_loc = (By.XPATH,loginData['password'])
+    # 密码值
+    passwordValue_loc = loginData['passwordValue']
+    # 关输入法元素
+    rmInput_loc = (By.CLASS_NAME,loginData['rmInput'])
+    # 登录按钮元素
+    loginButton_loc = (By.ID,loginData['loginButton'])
 
 
     def loginAction(self):
-        '''登录前步骤'''
+        '''登录步骤'''
+
+
+        # 向左滑动屏幕两次
         for i in range(2):
             self.swipeLeft()
             sleep(0.5)
@@ -34,13 +46,16 @@ class Login(Page):
         # 点击立即体验
         self.click(self.experience_loc)
         # 输入用户名
-        self.sendKeys()
-
-
-        driver.find_element(By.CLASS_NAME, "android.widget.EditText").send_keys("18602603111")
-        # Xpath，利用组合定位
-        driver.find_element(By.XPATH, "//*[@text='请输入密码' and @resource-id='com.csks.businesses:id/edt_password']").send_keys("123123")
-        driver.find_element(By.CLASS_NAME, "android.widget.EditText").click()
+        self.sendKeys(self.username_loc,self.usernameValue_loc)
+        # 输入密码
+        self.sendKeys(self.password_loc,self.passwordValue_loc)
+        # 去掉输入法
+        self.click(self.rmInput_loc)
         # 点击登录按钮
-        driver.find_element(By.ID, "com.csks.businesses:id/tv_login").click()
+        self.click(self.loginButton_loc)
+
+
+if __name__ == '__main__':
+    Login().loginAction()
+
 
