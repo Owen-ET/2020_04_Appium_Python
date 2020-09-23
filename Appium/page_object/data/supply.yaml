@@ -1,0 +1,10 @@
+data:
+  quotation: "//*[contains(@text,'规格描述：276373')]"
+  commitButton: "com.csks.businesses:id/btn_ok"
+  supplyNum:  "//*[@text='请输入供货数量']"
+    toast:  "//*[contains(@text,'供货数量不能为空')]"
+    value:  "1000"
+  carNum: "com.csks.businesses:id/edt_number1"
+    value:  "津A80801"
+  expectArrivalTime: "com.csks.businesses:id/tv_time"
+    arrivalTime:  "2020.09.31"

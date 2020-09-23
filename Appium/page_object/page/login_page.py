@@ -14,7 +14,7 @@ class Login(Page):
 
 
     # 获取登录yaml的值
-    loginData = fun().getYaml("login")['login']
+    loginData = fun().getYaml("login")['data']
 
 
     # 立即体验元素
@@ -22,11 +22,11 @@ class Login(Page):
     # 用户名元素
     username_loc = (By.CLASS_NAME,loginData['username'])
     # 用户名值
-    usernameValue_loc = loginData['usernameValue']
+    usernameValue = loginData['usernameValue']
     # 密码元素
     password_loc = (By.XPATH,loginData['password'])
     # 密码值
-    passwordValue_loc = loginData['passwordValue']
+    passwordValue = loginData['passwordValue']
     # 关输入法元素
     rmInput_loc = (By.CLASS_NAME,loginData['rmInput'])
     # 登录按钮元素
@@ -46,9 +46,9 @@ class Login(Page):
         # 点击立即体验
         self.click(self.experience_loc)
         # 输入用户名
-        self.sendKeys(self.username_loc,self.usernameValue_loc)
+        self.sendKeys(self.username_loc,self.usernameValue)
         # 输入密码
-        self.sendKeys(self.password_loc,self.passwordValue_loc)
+        self.sendKeys(self.password_loc,self.passwordValue)
         # 去掉输入法
         self.click(self.rmInput_loc)
         # 点击登录按钮
