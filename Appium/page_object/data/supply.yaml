@@ -8,3 +8,5 @@ data:
     value:  "津A80801"
   expectArrivalTime: "com.csks.businesses:id/tv_time"
     arrivalTime:  "2020.09.31"
+    okButton: "//*[@text='确定']"
+  descriptionGoods: "//*[contains(@text,'请对您的货品')]"

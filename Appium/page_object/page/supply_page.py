@@ -4,6 +4,8 @@
 # @Author  : zc
 # @File    : supply_page.py
 
+
+
 import datetime
 from page_object.page.login_page import Login
 from page_object.common.functions import Function as Fun
@@ -42,8 +44,10 @@ class Supply(Login):
     expectArrivalTime_loc = (By.ID, expectArrivalTimeData)
     # 预计到厂时间值
     arrivalTime = expectArrivalTimeData['arrivalTime']
-
-
+    # 预计到厂时间:确定按钮
+    okButton_loc = (By.XPATH, expectArrivalTimeData['okButton'])
+    # 货品描述toast
+    descriptionGoods_loc = (By.XPATH, supplyData['descriptionGoods'])
 
 
     def findSupplyInfo(self):
@@ -60,15 +64,16 @@ class Supply(Login):
 
 
     def dateSwipeUpAction(self):
-        '''日期滑动时间'''
-        arrivalTime = self.arrivalTime
-        arrivalDate = arrivalTime.split(".", 3)[2]
+        '''滑动到预计时间'''
+
+        # 获取预计时间
+        arrivalDate = self.arrivalTime.split(".", 3)[2]
         # 获取当前日期的日子
         now_time = str(datetime.datetime.now())
         now_date = now_time.split(" ")[0].split("-", 3)[2]
-
+        # 日期差值
         num = (int(arrivalDate) - int(now_date))
-
+        # 滑动到预计到厂时间
         self.timeSwipeUp(num)
 
 
@@ -82,7 +87,7 @@ class Supply(Login):
         # toast提示信息
         while 1 < 2:
             try:
-                toast = self.getToast(self.supplyNumToast_loc)
+                toast = self.getText(self.supplyNumToast_loc)
                 break
             except:
                 self.click(self.commitButton_loc)
@@ -93,7 +98,14 @@ class Supply(Login):
         self.sendKeys(self.carNum_loc,self.carNumValue)
         # 选择预计到厂时间
         self.click(self.expectArrivalTime_loc)
+        # 滑动到预计时间
         self.dateSwipeUpAction()
+        # 点击预计到厂时间:确定按钮
+        self.click(self.okButton_loc)
+        # 点击提交订单
+        self.click(self.commitButton_loc)
+        toast = self.getText(self.descriptionGoods_loc)
+        print("弹框提示语为：" + toast)
 
 
 
@@ -102,7 +114,5 @@ class Supply(Login):
 
         self.findSupplyInfo()
         self.addSupplyInfo()
-
-
 
 

@@ -31,8 +31,8 @@ class Page(object):
         self.find_element(*loc).click()
 
 
-    def getToast(self,loc):
-        '''获取toast提示信息'''
+    def getText(self,loc):
+        '''获取text信息'''
         return self.find_element(*loc).text
 
 
