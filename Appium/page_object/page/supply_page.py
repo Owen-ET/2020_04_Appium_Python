@@ -111,8 +111,12 @@ class Supply(Login):
 
 
     def addSupply_action(self):
-
+        """添加供货信息"""
         self.findSupplyInfo()
         self.addSupplyInfo()
 
 
+
+
+if __name__ == '__main__':
+    Supply().addSupply_action()

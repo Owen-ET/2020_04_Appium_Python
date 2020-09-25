@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a030696-4b12-466c-aee2-0e933ffae876" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Appium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Appium.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_object/data/supply.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/page_object/data/supply.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_object/page/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_object/page/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_object/page/supply_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_object/page/supply_page.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,15 +67,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5421" />
-          <entry key="txt" value="45" />
+          <entry key="py" value="5444" />
+          <entry key="txt" value="46" />
           <entry key="yaml" value="320" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="45" />
-          <entry key="Python" value="5421" />
+          <entry key="PLAIN_TEXT" value="46" />
+          <entry key="Python" value="5444" />
           <entry key="YAML" value="320" />
         </counts>
       </usages-collector>
@@ -90,11 +86,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page_object/page/supply_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="106" column="55" lean-forward="true" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
+            <state relative-caret-position="-1236">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#121#136#0" expanded="true" />
-                <marker date="1601026101000" expanded="true" signature="1352:2930" ph="..." />
+                <marker date="1601026173000" expanded="true" signature="1352:2930" ph="..." />
               </folding>
             </state>
           </provider>
@@ -599,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600855203207</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="092501，代码PO优化">
+      <created>1601026125129</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601026125129</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -613,7 +616,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="44" width="1530" height="1086" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18548387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -654,7 +656,8 @@
     <MESSAGE value="091401，代码PO优化" />
     <MESSAGE value="091501，代码PO优化" />
     <MESSAGE value="092301，代码PO优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="092301，代码PO优化" />
+    <MESSAGE value="092501，代码PO优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="092501，代码PO优化" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py" />
@@ -761,6 +764,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/page_object/data/supply.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/page_object/page/base_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -774,20 +784,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_object/data/supply.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page_object/page/supply_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="106" column="55" lean-forward="true" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
+        <state relative-caret-position="-1236">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#121#136#0" expanded="true" />
-            <marker date="1601026101000" expanded="true" signature="1352:2930" ph="..." />
+            <marker date="1601026173000" expanded="true" signature="1352:2930" ph="..." />
           </folding>
         </state>
       </provider>
